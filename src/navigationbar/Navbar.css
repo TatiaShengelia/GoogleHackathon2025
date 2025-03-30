@@ -1,0 +1,104 @@
+/* src/Navbar.css */
+body {
+  margin-bottom: 20px;
+  background-color: rgb(0, 0, 0);
+  margin-top: 70px; /* Add space for the fixed navbar */
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(30, 30, 40, 0.7); /* Semi-transparent background */
+  backdrop-filter: blur(8px); /* Add blur effect for modern browsers */
+  -webkit-backdrop-filter: blur(8px); /* For Safari */
+  padding: 1em;
+  width: 98%;
+  position: fixed;
+  top: 0; /* Explicitly set this to ensure it stays at the top */
+  left: 0;
+  z-index: 1000;
+  transition: transform 0.4s ease, opacity 0.4s ease; /* Smooth transition for these properties */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar-visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.navbar-hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  padding: 12px 12px;
+  font-size: 14px;
+  border: 1px solid rgba(204, 204, 204, 0.3);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-radius: 4px;
+  width: 150px;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+  outline: none;
+  width: 150px;
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.logo-image {
+  height: 46px;
+  width: 50px;
+  margin-right: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1em;
+  font-weight: bold;
+  position: relative;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+nav a:hover {
+  text-decoration: none;
+  opacity: 1;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: white;
+  transition: width 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+.logo {
+  margin-right: auto;
+}

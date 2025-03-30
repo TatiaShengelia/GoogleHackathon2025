@@ -1,0 +1,85 @@
+.signup-container {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.signup-form input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#birth-date-label {
+    color: #667;
+}
+
+.email-signup {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.divider {
+    margin: 20px 0;
+    color: #667;
+}
+
+.social-signup {
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-button {
+    flex: 1;
+    padding: 10px;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.facebook {
+    background-color: #3B5998;
+    color: white;
+}
+
+.google {
+    background-color: #eb5749;
+    color: white;
+}
+
+.instagram {
+    background-color: #000;
+    color: white;
+}
+
+.terms {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #666;
+}
+
+.terms a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.sign-up-footer {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #667;
+}

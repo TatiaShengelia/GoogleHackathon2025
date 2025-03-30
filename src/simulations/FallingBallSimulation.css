@@ -1,0 +1,54 @@
+.simulation-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.simulation-content {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    align-items: flex-start;
+    width: 400px;
+    /* Fixed width for the container */
+    margin: 0 auto;
+    /* Center the container */
+}
+
+.ball-container {
+    position: relative;
+    height: 300px;
+    /* Simulation height */
+    width: 50px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
+    /* Prevent this container from shrinking */
+}
+
+.ball {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: red;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.energy-info {
+    text-align: left;
+    min-width: 300px;
+    flex-shrink: 0;
+    /* Prevent this container from shrinking */
+}
+
+.controls {
+    margin-top: 20px;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.fall-button {
+    margin-top: 10px;
+}

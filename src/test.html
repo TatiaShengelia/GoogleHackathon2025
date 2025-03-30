@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        .textClass {
+            display: block;
+            margin: 10px;
+            font-size: large;
+        }
+
+        #t-user1 {
+            margin-top: 50px;
+        }
+
+        button {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <input class="textClass" type="text" id="t-user">
+    <input class="textClass" type="text" id="t-psw">
+    <input class="textClass" type="text" id="t-name">
+    <input class="textClass" type="text" id="t-char">
+    <button onclick="signUp(false)">SignUp</button>
+    <button onclick="signUp(true)">Update</button>
+
+    <input class="textClass" type="text" id="t-user1">
+    <input class="textClass" type="password" id="t-psw1">
+
+    <button onclick="signIn()">SignIn</button>
+
+    <script>
+        async function signUp(upd=false) {
+            let user = document.getElementById('t-user')?.value ?? '';
+            let psw = document.getElementById('t-psw')?.value ?? '';
+            let name = document.getElementById('t-name')?.value ?? '';
+            let char = document.getElementById('t-char')?.value ?? '';
+            if (!user) {
+                alert("Fill user!!!");
+                return;
+            }
+            if (!psw) {
+                alert("Fill password!!!");
+                return;
+            }
+            const myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/json");
+            body = JSON.stringify({ username: user, password: psw, fullName: name, character: char });
+            console.log(body);
+            let url='http://194.163.142.249:12020/signup';
+            if(upd){
+                url='http://194.163.142.249:12020/updateUser';
+            }
+            let response = await fetch(url, { method: 'post',headers:myHeaders, body: body });
+            
+            let data = await response.json();
+            console.log(data);
+            if(data?.result==true){
+                alert('OK');
+            }
+            else{
+                alert(`ERROR: ${data?.error?.detail}`);
+            }
+        }
+        async function signIn(){
+            let user = document.getElementById('t-user1')?.value ?? '';
+            let psw = document.getElementById('t-psw1')?.value ?? '';
+            if (!user) {
+                alert("Fill user!!!");
+                return;
+            }
+            if (!psw) {
+                alert("Fill password!!!");
+                return;
+            }
+            const myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/json");
+            body = JSON.stringify({ username: user, password: psw});
+            console.log(body);
+            let url='http://194.163.142.249:12020/createPost';
+            let response = await fetch(url, { method: 'post',headers:myHeaders, body: body });
+            
+            let data = await response.json();
+            console.log(data);
+            if(data?.result==true){
+                alert('OK');
+            }
+            else{
+                alert(`ERROR: ${data?.error?.detail}`);
+            }
+        }
+    </script>
+</body>
+
+</html>

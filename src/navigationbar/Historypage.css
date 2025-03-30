@@ -1,0 +1,248 @@
+.history-page {
+  min-height: 100vh;
+  color: #ffffff;
+  font-family: 'Arial', sans-serif;
+}
+
+.timeline-container {
+  max-width: 500px;
+  margin-left: 800px ;
+}
+
+
+.timeline-header {
+  padding: 20px;
+  margin-bottom: 60px;
+  width: 70%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 100px;
+  padding-bottom: 100px;
+  align-items: center;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  align-items: center;
+
+}
+
+.timeline-logo {
+  width: 215px;
+  height: 200px;
+}
+
+.timeline-header h2 {
+  margin: 0;
+  color: white;
+  font-size: 1.8rem;
+  line-height: 1.4;
+  flex-grow: 1;
+}
+
+
+
+/* You may need to adjust these existing styles */
+.timeline-container {
+  padding-top: 20px;
+}
+
+/* Make sure the timeline is responsive */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  
+  .timeline-header h2 {
+    font-size: 1.5rem;
+  }
+}
+
+.timeline-content {
+  position: relative;
+  padding-left: 20px;
+}
+
+.timeline-line {
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    #bebddf,
+    #9d9ad6,
+    #726ebe,
+    #5a55ad,      
+    #3e3a94,      
+    #2d288d,      
+    #1a1668,      
+    #130f5e,
+    #1a1668,      
+    #2d288d,      
+    #3e3a94,      
+    #726ebe,
+    #bebddf,
+    #9d9ad6,
+    #726ebe,
+    #5a55ad,      
+    #3e3a94,      
+    #2d288d,      
+    #1a1668,      
+    #130f5e,
+    #1a1668,      
+    #2d288d,      
+    #3e3a94,      
+    #726ebe,
+    #bebddf
+    
+  );
+  left: 110px; 
+  top: 0;
+  z-index: 1;
+}
+
+.timeline-item {
+  display: flex;
+  margin-bottom: 100px;
+  opacity: 0.5;
+  transition: opacity 0.5s ease;
+}
+
+.timeline-item.active {
+  opacity: 1;
+}
+
+.year-section {
+  width: 120px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  padding-right: 15px;
+}
+
+.year-label {
+  font-size: 24px;
+  font-weight: bold;
+  color: #777;
+  transition: all 0.3s ease;
+}
+
+.year-label.active {
+  font-size: 32px;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+.timeline-point {
+  width: 12px;
+  height: 12px;
+  background-color: #555;
+  margin-left: 10px;
+  transition: all 0.3s ease;
+  /* Square instead of circle */
+  border-radius: 5px;
+}
+
+.timeline-point.active {
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+  /* Square instead of circle */
+  border-radius: 5px;
+  border: none;
+}
+
+.event-section {
+  flex: 1;
+  padding-left: 25px; /* Space from the timeline */
+}
+
+.event-content {
+  background-color: rgba(30, 30, 30, 0.8);
+  padding: 25px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.event-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* Animation for the active timeline point */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(255, 255, 255, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+}
+
+.timeline-point.active {
+  animation: pulse 2s infinite;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .timeline-line {
+    left: 85px;
+  }
+  
+  .year-section {
+    width: 90px;
+  }
+  
+  .year-label {
+    font-size: 20px;
+  }
+  
+  .year-label.active {
+    font-size: 26px;
+  }
+  
+  .event-content {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .timeline-line {
+    left: 50px;
+  }
+  
+  .year-section {
+    width: 60px;
+  }
+  
+  .year-label {
+    font-size: 16px;
+  }
+  
+  .year-label.active {
+    font-size: 20px;
+  }
+  
+  .timeline-point {
+    width: 8px;
+    height: 8px;
+  }
+  
+  .timeline-point.active {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .event-section {
+    padding-left: 15px;
+  }
+  
+  .event-content p {
+    font-size: 16px;
+  }
+}

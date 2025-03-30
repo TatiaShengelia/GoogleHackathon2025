@@ -1,0 +1,157 @@
+/* Main container */
+.community-container {
+    display: flex;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Prevent double scrolling */
+}
+
+/* Channel list adjustments */
+.channel-list {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    bottom: 0; /* Full height */
+    width: 250px;
+    overflow-y: auto; /* Separate scroll for channels */
+}
+
+/* Left-side channel list */
+.channel-list {
+    position: fixed;
+    top: 70px;
+    /* Starts below navbar */
+    left: 0;
+    width: 250px;
+    height: calc(100vh - 70px);
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    overflow-y: auto;
+    transition: top 0.4s ease, height 0.4s ease;
+}
+
+/* When Navbar disappears, channel list expands to full height */
+.navbar-hidden+.community-container .channel-list {
+    top: 0;
+    height: 100vh;
+}
+
+.channel {
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #34495e;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.channel:hover {
+    background-color: #1abc9c;
+}
+
+/* Posts section */
+.post-section {
+    flex: 1;
+    margin-left: 250px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: relative; /* For absolute positioning of textarea */
+}
+
+/* Post input field */
+.post-form-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 15px;
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    max-width: 800px;
+    margin: 0 auto; /* Center horizontally */
+}
+
+.post-section {
+    flex-grow: 1;
+    margin-left: 250px;
+    padding: 20px 20px 120px; /* Added bottom padding for textarea */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: calc(100vh - 70px); /* Full height minus navbar */
+    overflow-y: auto; /* Enable scrolling for posts */
+}
+
+/* Posts container */
+.posts {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    padding-bottom: 165px;
+}
+
+/* Title and "No Posts" text (Centered Horizontally at Top) */
+.post-section h2 {
+    font-size: 24px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.no-posts {
+    font-size: 20px;
+    color: #aaa;
+    margin-top: 10px;
+}
+
+/* Post input field (centered horizontally, excluding channel list width) */
+.post-form-container {
+    position: fixed;
+    bottom: 0;
+    left: calc(50% + 125px);
+    /* Centers in available space */
+    transform: translateX(-50%);
+    background: white;
+    width: 600px;
+    padding: 15px;
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Text area: fixed size with scroll */
+textarea {
+    flex: 1;
+    height: 80px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    resize: none;
+    overflow-y: auto;
+}
+
+/* Post button on the right */
+button {
+    background-color: #34495e;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #1abc9c;
+}

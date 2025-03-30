@@ -1,0 +1,261 @@
+.topic-detail-page {       
+    color: #fff;
+    min-height: 100vh;
+    padding-bottom: 2rem;
+}
+  
+.topic-detail-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+  
+.navigation-links {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+  
+.back-button {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+  
+.back-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+  
+.topic-header .topic-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    padding-bottom: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+}
+  
+.topic-content {
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+  
+.topic-introduction {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #ffffff;
+}
+
+
+  
+.content-section {
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.section-header {
+    padding: 1rem 1.5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.section-header:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+  
+.section-title {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+  
+.section-number {
+    margin-right: 0.5rem;
+    font-weight: bold;
+}
+
+.toggle-icon {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 1rem;
+}
+  
+.section-content-wrapper {
+    padding: 1rem 1.5rem;
+    background-color: rgba(255, 255, 255, 0.137);
+}
+
+.section-content-container {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+    align-items: flex-start;
+}
+
+.section-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.section-image-container {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-image {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 8px;
+    object-fit: contain;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+  
+.subpoint {
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.subpoint-header {
+    padding: 0.8rem 1.2rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.subpoint-header:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+  
+.subpoint-title {
+    font-size: 1.4rem;
+    color: #fff;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+  
+.subpoint-number {
+    margin-right: 0.5rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+  
+.subpoint-content {
+    padding: 1rem 1.5rem;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.subpoint-content-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.subpoint-text {
+    flex: 1;
+    min-width: 0;
+    white-space: pre-line;
+}
+
+.subpoint-image-container {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subpoint-image {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 8px;
+    object-fit: contain;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* For the not found case */
+.topic-not-found {
+    text-align: center;
+    padding: 5rem 1rem;
+}
+  
+.topic-not-found button {
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.recommendations-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+  
+.recommendation-link {
+    padding: 0.5rem 2rem;
+    border-radius: 4px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+  
+.recommendation-link:hover {
+    background-color: #c199ee56;
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .topic-title {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .subpoint-title {
+        font-size: 1.2rem;
+    }
+
+    .section-content-container,
+    .subpoint-content-wrapper {
+        flex-direction: column;
+    }
+    
+    .section-image-container,
+    .subpoint-image-container {
+        min-width: 100%;
+        margin-top: 1rem;
+    }
+    
+    .section-image,
+    .subpoint-image {
+        max-width: 100%;
+    }
+}

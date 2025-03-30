@@ -1,0 +1,115 @@
+.event-detail-page {
+  color: #fff;
+  min-height: 100vh;
+  padding-bottom: 1rem;
+}
+
+.event-detail-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
+.back-button {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.event-header {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 1rem;
+}
+
+.event-title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.event-description {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.topics-section h1 {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 0.5rem;
+}
+
+.topics-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.img1 {
+  width: 20%;
+  border-radius: 6px;
+}
+
+.topic-item {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.small {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.topic-item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+}
+
+.topic-title {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.topic-description {
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #ffffff;
+  line-height: 1.4;
+  font-size: 1rem;
+}
+
+.quiz {
+  background-color: rgba(255, 255, 255, 0.685);
+  border-radius: 5px;
+  height: 60px;
+  min-width: 100px;
+}
+
+.event-not-found {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.event-not-found button {
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+  cursor: pointer;
+}
